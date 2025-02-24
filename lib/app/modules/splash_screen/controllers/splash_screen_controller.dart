@@ -1,7 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:todo/app/routes/app_pages.dart';
 
-class SplashScreenController extends GetxController {
+class SplashScreenController extends GetxController with GetTickerProviderStateMixin {
   //TODO: Implement SplashScreenController
 
   final count = 0.obs;
@@ -19,6 +20,7 @@ class SplashScreenController extends GetxController {
   @override
   void onClose() {
     super.onClose();
+    _controller.dispose();
   }
 
   void increment() => count.value++;
@@ -32,4 +34,14 @@ class SplashScreenController extends GetxController {
   void moveToHome(){
     Get.toNamed(Routes.HOME);
   }
+
+  // First Align Transition
+  late final AnimationController _controller = AnimationController(
+    duration: const Duration(seconds: 2),
+    vsync: this,
+  )..repeat(reverse: true);
+  late final Animation<AlignmentGeometry> animation = Tween<AlignmentGeometry>(
+    begin: Alignment.bottomRight,
+    end: Alignment.center,
+  ).animate(CurvedAnimation(parent: _controller, curve: Curves.bounceIn));
 }

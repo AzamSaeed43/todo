@@ -8,9 +8,13 @@ class SplashScreenView extends GetView<SplashScreenController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Image.asset(ImagesPath.logo),
-      ),
+      body: ColoredBox(
+        color: Colors.white,
+        child: AlignTransition(
+          alignment: controller.animation,
+          child: Padding(padding: const EdgeInsets.all(8.0), child: Image.asset(ImagesPath.logo),),
+        ),
+      )
     );
   }
 }
