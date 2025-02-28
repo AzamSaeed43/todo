@@ -10,7 +10,7 @@ class AddTaskView extends GetView<AddTaskController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('AddTaskView'),
+        title: const Text('Add Task'),
         centerTitle: true,
       ),
       body: const Center(

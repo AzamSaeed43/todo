@@ -7,25 +7,6 @@ import 'package:todo/app/routes/app_pages.dart';
 
 class HomeController extends GetxController with GetTickerProviderStateMixin{
   //TODO: Implement HomeController
-
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
-  }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
-
   List<BottomNavigationBarItem> items = [
     const BottomNavigationBarItem(icon: Icon(Icons.home),
     label: 'Home'),

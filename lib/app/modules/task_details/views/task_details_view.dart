@@ -10,7 +10,7 @@ class TaskDetailsView extends GetView<TaskDetailsController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('TaskDetailsView'),
+        title: const Text('Task Details'),
         centerTitle: true,
       ),
       body: Column(

@@ -3,8 +3,6 @@ import 'package:get/get.dart';
 
 class TaskDetailsController extends GetxController with GetTickerProviderStateMixin {
   //TODO: Implement TaskDetailsController
-
-  final count = 0.obs;
   RxInt index = 0.obs;
 
   @override
@@ -18,18 +16,6 @@ class TaskDetailsController extends GetxController with GetTickerProviderStateMi
       index(Get.arguments[1]);
     }
   }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 
   late final AnimationController controller = AnimationController(
     duration: const Duration(seconds: 10),

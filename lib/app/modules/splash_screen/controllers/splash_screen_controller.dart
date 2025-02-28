@@ -4,26 +4,16 @@ import 'package:todo/app/routes/app_pages.dart';
 
 class SplashScreenController extends GetxController with GetTickerProviderStateMixin {
   //TODO: Implement SplashScreenController
-
-  final count = 0.obs;
-  @override
+@override
   void onInit() {
     super.onInit();
     init();
   }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
   @override
   void onClose() {
     super.onClose();
     _controller.dispose();
   }
-
-  void increment() => count.value++;
 
   init() async {
     await Future.delayed(const Duration(seconds: 5),(){
