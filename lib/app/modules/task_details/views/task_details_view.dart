@@ -15,9 +15,29 @@ class TaskDetailsView extends GetView<TaskDetailsController> {
       ),
       body: Column(
         children: [
+          Obx(()=>GestureDetector(
+            onHorizontalDragUpdate: (details) {
+              controller.rotationY.value += details.primaryDelta! * 0.01;
+            },
+            child: Hero(
+              tag: 'hero_tag_${controller.index}',
+              child: SizedBox(
+                width: Get.width,
+                height: Get.height / 3,
+                child: Transform(
+                  transform: Matrix4.identity()
+                    ..setEntry(3, 2, 0.001) // Add perspective
+                    ..rotateY(controller.rotationY.value), // Rotate along Y-axis
+                  alignment: Alignment.center,
+                  child: Image.asset('assets/images/person.png'),
+                ),
+              ),
+            ),
+          ),),
           AnimatedBuilder(
             animation: controller.controller,
-            child: Container(
+            child:
+            Container(
               height: Get.height / 6,
               width: Get.width,
               decoration: const BoxDecoration(

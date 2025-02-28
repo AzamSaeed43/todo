@@ -5,9 +5,18 @@ class TaskDetailsController extends GetxController with GetTickerProviderStateMi
   //TODO: Implement TaskDetailsController
 
   final count = 0.obs;
+  RxInt index = 0.obs;
+
   @override
   void onInit() {
     super.onInit();
+    init();
+  }
+
+  init(){
+    if(Get.arguments != null && Get.arguments[1].runtimeType == int){
+      index(Get.arguments[1]);
+    }
   }
 
   @override
@@ -29,5 +38,7 @@ class TaskDetailsController extends GetxController with GetTickerProviderStateMi
 
   RxBool selected = false.obs;
   RxBool first = false.obs;
+
+  RxDouble rotationY = 0.00.obs;
 
 }

@@ -22,7 +22,7 @@ class CustomZoomTransition extends CustomTransition {
   Widget buildTransition(BuildContext context, Curve? curve, Alignment? alignment, Animation<double> animation, Animation<double> secondaryAnimation, Widget child) {
     // TODO: implement buildTransition
     // Get the passed position
-    Offset? startPosition = Get.arguments as Offset?;
+    Offset? startPosition = Get.arguments[0] as Offset?;
     Alignment startAlignment = startPosition != null
         ? Alignment((startPosition.dx / Get.width)  , (startPosition.dy / Get.height)  )
         : Alignment.center;

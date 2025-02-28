@@ -27,12 +27,12 @@ class SplashScreenController extends GetxController with GetTickerProviderStateM
 
   init() async {
     await Future.delayed(const Duration(seconds: 5),(){
-      moveToHome();
+      moveToOnBoarding();
     });
   }
 
-  void moveToHome(){
-    Get.toNamed(Routes.HOME);
+  void moveToOnBoarding(){
+    Get.toNamed(Routes.ON_BOARDING);
   }
 
   // First Align Transition
