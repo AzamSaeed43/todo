@@ -16,9 +16,7 @@ class OnBoardingView extends GetView<OnBoardingController> {
             controller: controller.pageController,
             itemCount: controller.pages.length,
             onPageChanged: (index) {
-              //setState(() {
               controller.currentPage.value = index;
-              // });
             },
             itemBuilder: (context, index) {
               return OnboardingPage(

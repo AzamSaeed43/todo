@@ -7,12 +7,6 @@ import 'package:todo/app/routes/app_pages.dart';
 
 class HomeController extends GetxController with GetTickerProviderStateMixin{
   //TODO: Implement HomeController
-  List<BottomNavigationBarItem> items = [
-    const BottomNavigationBarItem(icon: Icon(Icons.home),
-    label: 'Home'),
-    const BottomNavigationBarItem(icon: Icon(Icons.person),
-    label: 'Profile'),
-  ];
 
   final PageController pageController = PageController();
 

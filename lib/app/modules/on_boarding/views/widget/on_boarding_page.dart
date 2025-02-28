@@ -29,7 +29,7 @@ class OnboardingPage extends StatelessWidget {
           bottom: 130,
           right: 20,
           child: TweenAnimationBuilder(
-            duration: index==0 ? const Duration(seconds: 5) : const Duration(seconds: 2),
+            duration: index==0 ? const Duration(seconds: 8) : const Duration(seconds: 2),
             tween: Tween<double>(begin: isActive ? 0.8 : 0.5, end: isActive ? 1.0 : 0.5),
             builder: (context, double scale, child) {
               return Transform.scale(
