@@ -7,20 +7,50 @@ class TaskViewController extends GetxController {
 
   List<GlobalKey> myItemKey = List.generate(10, (index) => GlobalKey());
 
-  List<Map<String,dynamic>> todo_list = [{'task_name':'First Task of Day','task_status':'Pending','task_date':'20-2-2025'},
-    {'task_name':'2nd Task of Day','task_status':'Pending','task_date':'20-2-2025'},
-    {'task_name':'3rd Task of Day','task_status':'Pending','task_date':'20-2-2025'},
-    {'task_name':'4th Task of Day','task_status':'Pending','task_date':'20-2-2025'},
-    {'task_name':'5th Task of Day','task_status':'Pending','task_date':'20-2-2025'},
-    {'task_name':'6th Task of Day','task_status':'Pending','task_date':'20-2-2025'},
-    {'task_name':'7th Task of Day','task_status':'Pending','task_date':'20-2-2025'}];
+  List<Map<String, dynamic>> todo_list = [
+    {
+      'task_name': 'First Task of Day',
+      'task_status': 'Pending',
+      'task_date': '20-2-2025'
+    },
+    {
+      'task_name': '2nd Task of Day',
+      'task_status': 'Pending',
+      'task_date': '20-2-2025'
+    },
+    {
+      'task_name': '3rd Task of Day',
+      'task_status': 'Pending',
+      'task_date': '20-2-2025'
+    },
+    {
+      'task_name': '4th Task of Day',
+      'task_status': 'Pending',
+      'task_date': '20-2-2025'
+    },
+    {
+      'task_name': '5th Task of Day',
+      'task_status': 'Pending',
+      'task_date': '20-2-2025'
+    },
+    {
+      'task_name': '6th Task of Day',
+      'task_status': 'Pending',
+      'task_date': '20-2-2025'
+    },
+    {
+      'task_name': '7th Task of Day',
+      'task_status': 'Pending',
+      'task_date': '20-2-2025'
+    }
+  ];
 
   RxList<bool> selected = List.filled(7, true).obs;
 
-  void moveToDetails(GlobalKey key,int index) {
+  void moveToDetails(GlobalKey key, int index) {
     RenderBox renderBox = key.currentContext!.findRenderObject() as RenderBox;
     Offset position = renderBox.localToGlobal(Offset.zero); // Get item position
 
-    Get.toNamed(Routes.TASK_DETAILS, arguments: [position,index]);
+    Get.toNamed(Routes.TASK_DETAILS, arguments: [position, index]);
   }
 }

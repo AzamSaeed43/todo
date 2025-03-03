@@ -6,6 +6,7 @@ import '../controllers/add_task_controller.dart';
 
 class AddTaskView extends GetView<AddTaskController> {
   const AddTaskView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

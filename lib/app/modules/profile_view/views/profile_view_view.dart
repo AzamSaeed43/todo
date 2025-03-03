@@ -6,6 +6,7 @@ import '../controllers/profile_view_controller.dart';
 
 class ProfileViewView extends GetView<ProfileViewController> {
   const ProfileViewView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

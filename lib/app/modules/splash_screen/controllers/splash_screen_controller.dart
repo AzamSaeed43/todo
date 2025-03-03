@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:todo/app/routes/app_pages.dart';
 
-class SplashScreenController extends GetxController with GetTickerProviderStateMixin {
+class SplashScreenController extends GetxController
+    with GetTickerProviderStateMixin {
   //TODO: Implement SplashScreenController
-@override
+  @override
   void onInit() {
     super.onInit();
     init();
   }
+
   @override
   void onClose() {
     super.onClose();
@@ -16,12 +18,12 @@ class SplashScreenController extends GetxController with GetTickerProviderStateM
   }
 
   init() async {
-    await Future.delayed(const Duration(seconds: 5),(){
+    await Future.delayed(const Duration(seconds: 5), () {
       moveToOnBoarding();
     });
   }
 
-  void moveToOnBoarding(){
+  void moveToOnBoarding() {
     Get.toNamed(Routes.ON_BOARDING);
   }
 

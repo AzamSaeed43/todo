@@ -65,7 +65,8 @@ class DashboardView extends GetView<DashboardController> {
                         alignment: Alignment.centerLeft,
                         duration: const Duration(seconds: 2),
                         curve: Curves.fastEaseInToSlowEaseOut,
-                        padding: const EdgeInsets.symmetric(horizontal: 24,vertical: 10),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 24, vertical: 10),
                         child: const Icon(Icons.delete,
                             color: Colors.white, size: 32),
                       ),
@@ -81,7 +82,8 @@ class DashboardView extends GetView<DashboardController> {
                         alignment: Alignment.centerRight,
                         duration: const Duration(seconds: 2),
                         curve: Curves.fastEaseInToSlowEaseOut,
-                        padding: const EdgeInsets.symmetric(horizontal: 24,vertical: 10),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 24, vertical: 10),
                         child: const Icon(Icons.delete,
                             color: Colors.white, size: 32),
                       ),

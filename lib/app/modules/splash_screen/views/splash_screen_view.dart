@@ -5,16 +5,19 @@ import '../controllers/splash_screen_controller.dart';
 
 class SplashScreenView extends GetView<SplashScreenController> {
   const SplashScreenView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ColoredBox(
-        color: Colors.white,
-        child: AlignTransition(
-          alignment: controller.animation,
-          child: Padding(padding: const EdgeInsets.all(8.0), child: Image.asset(ImagesPath.logo),),
+        body: ColoredBox(
+      color: Colors.white,
+      child: AlignTransition(
+        alignment: controller.animation,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Image.asset(ImagesPath.logo),
         ),
-      )
-    );
+      ),
+    ));
   }
 }

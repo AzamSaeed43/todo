@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class TaskDetailsController extends GetxController with GetTickerProviderStateMixin {
+class TaskDetailsController extends GetxController
+    with GetTickerProviderStateMixin {
   //TODO: Implement TaskDetailsController
   RxInt index = 0.obs;
 
@@ -11,8 +12,8 @@ class TaskDetailsController extends GetxController with GetTickerProviderStateMi
     init();
   }
 
-  init(){
-    if(Get.arguments != null && Get.arguments[1].runtimeType == int){
+  init() {
+    if (Get.arguments != null && Get.arguments[1].runtimeType == int) {
       index(Get.arguments[1]);
     }
   }
@@ -26,5 +27,4 @@ class TaskDetailsController extends GetxController with GetTickerProviderStateMi
   RxBool first = false.obs;
 
   RxDouble rotationY = 0.00.obs;
-
 }
